@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Lato&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400&family=Staatliches&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+.body{
+  overflow: hidden;
+  font-family: 'roboto', sans-serif;
+  height: 100vh;
+  margin: 0;
+ 
+}   
+.container{
+  display: relative;
+  width: 100%;
+  height: 100vh;
+}
+.container-left{
+  position: absolute;
+  left: 0;
+  background: url('https://file-cloud.yst.com.cn/website/2020/04/14/cc375ee89dca435db613add3aaa07786.png')no-repeat center center/cover;
+  height: 100%;
+  width: 50%;
+  transition: width 0.3s linear;
+}
+
+.container-left::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: red;
+  opacity: 0.8;
+}
+
+.container-right{
+  position: absolute;
+  right: 0;
+  background: url('https://www.jiada.my/data/editor/product/6901285991271/%E6%80%A1%E5%AE%9D%E7%BA%AF%E5%87%80%E6%B0%B4%201.5L.jpg') no-repeat center center/cover;
+  height: 100%;
+  width: 50%;
+  transition: width 0.3s linear;
+}
+
+.container-right::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: green;
+  opacity: 0.8;
+}
+
+h1{
+  position: absolute;
+  font-size: 4rem;
+  color: #fff;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
+  transition: top 0.1s linear;
+  transition-delay: 0.1s ;
+}
+
+.btn{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  color: #fff;
+  border: #fff solid 0.2rem;
+  width: 15rem;
+  padding: 1.5rem;
+}
+.btn.left:hover{
+  background-color: red;
+  opacity: 1;
+}
+.btn.right:hover{
+  background-color: green;
+  opacity: 1;
+}
+.hover-left .container-left{
+  width: 70%;
+}
+.hover-left .container-right{
+  width: 30%;
+}
+.hover-right .container-right{
+  width: 70%;
+}
+.hover-right .container-left{
+  width: 30%;
+  
+}
+.hover-right .container-left h1{
+  top: 20%;
+
+}
+
